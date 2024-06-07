@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin:0;
+  padding:5;
+  display:flex;
+  justify-content: space-between;
+  
+}
+.dropbtn {
+  background-color: grey;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:400px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:grey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#content2 {
+  display: flex;
+}
+
+#flex1 {
+  flex: 50%;
+  padding: 10px;
+   
+}
+#flex2,#flex3,#flex4,#flex5
+{
+float: left;
+Width:321px;
+Height:252px;
+Radius:11.87px;
+position:relative;
+display:inline-flex;
+flex-direction: column;
+background-color: grey;
+}
+#content4
+{
+    display:flex;
+}
+#bg1
+{
+    margin: 10px 10px 10px 10px;
+    display: inline;
+    opacity:100px ;
+    float: left;
+    Width:423px;
+    Height:334px;
+    background-image: url("https://plus.unsplash.com/premium_photo-1697729414037-e2a59823d9d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFsYXdhbnxlbnwwfHwwfHx8MA%3D%3D");
+}
+#bg2
+{
+    margin: 10px 10px 10px 10px;
+    display: inline;
+    opacity:100px ;
+    float: left;
+    Width:423px;
+    Height:334px;
+    background-image: url("https://images.unsplash.com/photo-1601621915196-2621bfb0cd6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2VvdWx8ZW58MHx8MHx8fDA%3D");
+}
+ #bg3
+ {  
+    margin: 10px 10px 10px 10px;
+    display: inline;
+    float: left;
+    Width:423px;
+    Height:334px;
+    background-image: url("https://plus.unsplash.com/premium_photo-1697729414037-e2a59823d9d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFsYXdhbnxlbnwwfHwwfHx8MA%3D%3D");
+    background-image:no-repeat;
+    opacity:100px ;
+ }
+#content5
+{
+    display:flex;
+    
+}
+#content6 {
+  display: flex;
+}
+
+#fq1 {
+  flex: 50%;
+  padding: 10px;
+   
+}
+#rcorners1 {
+  border-radius: 25px;
+  background: grey;
+  padding: 20px; 
+  width: 350px;
+  height: 50px;  
+}
+#font1
+{
+    font-size:60px;
+}
+</style>
+</head>
+<body>
+<div id="content1">
+<ul>
+  <li><a href="#home">Majestic</a></li>
+  <li><a href="#news">Tours</a></li>
+  <li><a href="#contact">plan vacations</a></li>
+  <li><a href="#about">pricing</a></li>
+  <li><a href="#contact">about us</a></li>
+  <li><a href="#about">blog</a></li>
+  <li><a href="#about">contact</a></li>
+  <li><a href="#about"><input type="text"></input></a></li>
+  <li><a href="#about">getstarted</a></li>
+  </ul>
+</div>
+
+<div id="content2">
+    <div id="flex1">
+<h1 id="font1">Discover Unforgettable Travels with Majestic Travel</h1>
+<p>crafting memories one destination at a time majestic travels your one destination to unforgettable journeys</p>
+<button type="submit">Make a plane</button>
+</div>
+<div id="flex1">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8fHww">
+</div>
+</div>
+<div id="content3">
+
+    <div class="dropdown">
+        <button class="dropbtn">Where are you going?</button>
+        <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">check in check out</button>
+        <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">adults</button>
+        <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        </div>
+        <button type="submit">search</button>
+      </div>
+    
+        <h2>we provide you best services</h2>
+        <div id="content4">
+        <div id="flex2">
+        <h4>World wide travelling</h4>
+        <p>Explore diverse cultures and stunning landscapes around the globe</p>
+        <a href="#home">Learn more</a>
+        </div>
+        <div id="flex3">
+        <h4>lot of choices</h4>
+        <p>Discover diverse cultures and stunning landscapes around the globe</p>
+        <a href="#home">Learn more</a>
+        </div>
+        <div id="flex4">
+        <h4>Our Responsibilities</h4>
+        <p>At Majestic Travels,we prioritize  sustainable.</p>
+        <a href="#home">Learn more</a>
+        </div>
+        <div id="flex5">
+        <h4>Easy Booking</h4>
+        <p>With Majestic Travels booking your dream trip is simple.</p>
+        <a href="#home">Learn more</a>
+        </div>
+        </div>
+            <h4>Trending Destinations</h4>
+            <div id="content5">
+            <div id="bg1">
+            <p>Palawan</p>
+            <p>palawan officially the province of palawan is a archipilagic province of phillipines that is located in the region of Mimaropa</p>
+            <button type="submit">Make a plane</button>
+            <button type="submit">Learn more</button>
+            </div>
+            <div id="bg2">
+            <p>Norway</p>
+            <p>Norway formally yhe kingdom of norway,is a nordic country in the northern europe situated on the scandinavian Peninsula</p>
+            <button type="submit">Make a plane</button>
+            <button type="submit">Learn more</button>
+            </div>
+            <div id="bg3">
+            <p>Seoul</p>
+            <p>Seoul officially Seoul special city,is the capital of republic of korea commonly known as south korea</p>
+            <button type="submit">Make a plane</button>
+            <button type="submit">Learn more</button>
+            </div>
+            </div>
+            <div id="content6">
+                <div id="fq1">
+                <h3>Frequently Asked Questions</h3>
+                <p>find answers to common queries about majestic travels services,booking process and more.Explore our faq section to get the information you need for a smmoth and enjoyable travel experience.</p>
+                </div>
+                <div id="fq1">
+                <p id="rcorners1">What services do you offer?</p>
+                <p id="rcorners1">How can I book a trip?</p>
+                <p id="rcorners1">Can I customize my itenary?</p>
+                <p id="rcorners1">What is your cancellation policy?</p>
+                <p id="rcorners1">Do you offer Travel Insurance?</p>
+                <p id="rcorners1">How do I stay updated on travel advisories?</p>
+                <p id="rcorners1">What payment methods do you accept?</p>
+                </div>
+            </div>
+
+
+
+
+</div>
+</body>
+</html>
