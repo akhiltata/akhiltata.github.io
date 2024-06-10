@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
+
 ul {
   list-style-type: none;
   margin:0;
@@ -35,7 +38,7 @@ ul {
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content #selectVal  {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -142,20 +145,31 @@ background-color: lightgray;
 {
     font-size:60px;
 }
+#expand-btn {
+    padding: 10px 20px;
+    background-color:lightgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
 </style>
+
+
 </head>
 <body>
 <div id="content1">
 <ul>
-  <li><a href="#home">Majestic</a></li>
-  <li><a href="#news">Tours</a></li>
-  <li><a href="#contact">plan vacations</a></li>
-  <li><a href="#about">pricing</a></li>
-  <li><a href="#contact">about us</a></li>
-  <li><a href="#about">blog</a></li>
-  <li><a href="#about">contact</a></li>
-  <li><a href="#about"><input type="text"></input></a></li>
-  <li><a href="#about">getstarted</a></li>
+  <li><a href="#">Majestic</a></li>
+  <li><a href="#">Tours</a></li>
+  <li><a href="#">plan vacations</a></li>
+  <li><a href="#">pricing</a></li>
+  <li><a href="C:\Users\akhil\Documents\GitHub\akhiltata.github.io\about.html">about us</a></li>
+  <li><a href="#">blog</a></li>
+  <li><a href="#">contact</a></li>
+  <li><a href="#"><input type="text" placeholder="search majestic"></input></a></li>
+  <li><a href="#">getstarted</a></li>
   </ul>
 </div>
 
@@ -172,30 +186,50 @@ background-color: lightgray;
 <div id="content3">
 
     <div class="dropdown">
+      <form>
         <button class="dropbtn">Where are you going?</button>
         <div class="dropdown-content">
-        <a href="#">new delhi</a>
-        <a href="#">hyderabad</a>
-        <a href="#">London</a>
+          <select id="selectVal">
+        <option value="newdelhi">new delhi</option>
+        <option value="hyderabad">hyderabad</option>
+        <option value="London">London</option>
+        </select>
+      </form>
         </div>
       </div>
       <div class="dropdown">
         <button class="dropbtn">check in check out</button>
         <div class="dropdown-content">
-        <a href="#">Link1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+          
+        <a href="#"><input type="text" id="datetimePicker" placeholder="Select Date and Time"></a>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#datetimePicker", {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+    });
+</script>
+        <a href="#"><input type="text" id="datetimePicker" placeholder="Select Date and Time"></a>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+          flatpickr("#datetimePicker", {
+              enableTime: true,
+              dateFormat: "Y-m-d H:i",
+            });
+          </script>
         </div>
       </div>
       <div class="dropdown">
         <button class="dropbtn">adults</button>
         <div class="dropdown-content">
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
+        <a href="#"><option value="newdelhi">2</option></a>
+        <a href="#"><option value="newdelhi">3</option></a>
+        <a href="#"><option value="newdelhi">4</option></a>
         </div>
-        <button id="btn1" type="submit">search</button>
+        <button id="btn1" type="submit" onclick="search()">search</button>
+      
       </div>
+      <p id="demo">your flight:</p>
     
         <h2>we provide you best services</h2>
         <div id="content4">
@@ -247,7 +281,8 @@ background-color: lightgray;
                 <p>find answers to common queries about majestic travels services,booking process and more.Explore our faq section to get the information you need for a smmoth and enjoyable travel experience.</p>
                 </div>
                 <div id="fq1">
-                <p id="rcorners1">What services do you offer?</p>
+                <p id="rcorners1">What services do you offer?</p><button id="expand-btn" onclick="toggleText()">expand</button>
+                <p id="expand-text" style="display:none;">We offer trip services to various countries.</p>
                 <p id="rcorners1">How can I book a trip?</p>
                 <p id="rcorners1">Can I customize my itenary?</p>
                 <p id="rcorners1">What is your cancellation policy?</p>
@@ -256,7 +291,58 @@ background-color: lightgray;
                 <p id="rcorners1">What payment methods do you accept?</p>
                 </div>
             </div>
+            <script>
+              let flights = [
+                {
+                  "name":"indigo",
+                  "from": "delhi",
+                  "to": "hyderabad",
+                  "departure": new Date('2024-06-11'),
+                  "pricing":"5000"
+                  
+                },
+                {
+                  "name":"vistara",
+                  "from": "vizag",
+                  "to": "newdelhi",
+                  "departure": new Date('2018-06-11'),
+                  "pricing":"10000"
+                },
+                {
+                  "name":"airindia",
+                  "from": "pune",
+                  "to": "london",
+                  "departure": new Date('2024-06-11'),
+                  "pricing":"20000"
+                }
+              ]
+              function search(){
+                var output;
+              var selectElement=document.getElementById("selectVal");
+              output=selectElement.value;
+              console.log(output);
+              for(var i=0;i<flights.length;i++)
+              {
+              if(output==flights[i].to)
+              {
+                console.log(flights[i]);
+                document.getElementById("demo").innerHTML ="name is"+flights[i].name+"departure is"+flights[i].departure+"pricing is"+flights[i].pricing;
+              }
+              }
+              }
+              function toggleText() {
+      var text = document.getElementById("expand-text");
+      var button = document.getElementById("expand-btn");
+      if (text.style.display === "none") {
+        text.style.display = "block";
+        button.textContent = "Hide";
+      } else {
+        text.style.display = "none";
+        button.textContent = "Expand";
+      }
+    }
 
+ </script>
 
 
 
