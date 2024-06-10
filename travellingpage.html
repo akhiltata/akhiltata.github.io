@@ -8,7 +8,7 @@
 ul {
   list-style-type: none;
   margin:0;
-  padding:5;
+  padding:5px;
   display:flex;
   justify-content: space-between;
   
@@ -21,6 +21,7 @@ ul {
   border: none;
   width:400px;
   cursor: pointer;
+  margin: 20px;
 }
 
 .dropdown {
@@ -75,7 +76,7 @@ ul {
 }
 #flex2,#flex3,#flex4,#flex5
 {
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
 float: left;
 Width:321px;
 Height:252px;
@@ -93,7 +94,7 @@ background-color: lightgray;
 {
     margin: 10px 10px 10px 10px;
     display: inline;
-    opacity:100px ;
+    opacity:0.8 ;
     float: left;
     Width:423px;
     Height:334px;
@@ -103,7 +104,7 @@ background-color: lightgray;
 {
     margin: 10px 10px 10px 10px;
     display: inline;
-    opacity:100px ;
+    opacity:0.8 ;
     float: left;
     Width:423px;
     Height:334px;
@@ -114,6 +115,7 @@ background-color: lightgray;
     margin: 10px 10px 10px 10px;
     display: inline;
     float: left;
+    opacity:0.8 ;
     Width:423px;
     Height:334px;
     background-image: url("https://plus.unsplash.com/premium_photo-1697729414037-e2a59823d9d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFsYXdhbnxlbnwwfHwwfHx8MA%3D%3D");
@@ -154,6 +156,27 @@ background-color: lightgray;
     cursor: pointer;
     font-size: 16px;
   }
+  .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
 </style>
 
 
@@ -165,7 +188,7 @@ background-color: lightgray;
   <li><a href="#">Tours</a></li>
   <li><a href="#">plan vacations</a></li>
   <li><a href="#">pricing</a></li>
-  <li><a href="C:\Users\akhil\Documents\GitHub\akhiltata.github.io\about.html">about us</a></li>
+  <li><a href="about.html" target="_blank">about us</a></li>
   <li><a href="#">blog</a></li>
   <li><a href="#">contact</a></li>
   <li><a href="#"><input type="text" placeholder="search majestic"></input></a></li>
@@ -180,7 +203,7 @@ background-color: lightgray;
 <button type="submit">Make a plane</button>
 </div>
 <div id="flex1">
-<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8fHww">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8fHww" width="300px" height="300px">
 </div>
 </div>
 <div id="content3">
@@ -222,9 +245,9 @@ background-color: lightgray;
       <div class="dropdown">
         <button class="dropbtn">adults</button>
         <div class="dropdown-content">
-        <a href="#"><option value="newdelhi">2</option></a>
-        <a href="#"><option value="newdelhi">3</option></a>
-        <a href="#"><option value="newdelhi">4</option></a>
+        <a href="#"><option value="2">2</option></a>
+        <a href="#"><option value="3">3</option></a>
+        <a href="#"><option value="4">4</option></a>
         </div>
         <button id="btn1" type="submit" onclick="search()">search</button>
       
@@ -245,7 +268,7 @@ background-color: lightgray;
         </div>
         <div id="flex4">
         <h4>Our Responsibilities</h4>
-        <p>At Majestic Travels,we prioritize  sustainable.</p>
+        <p>At Majestic Travel, we prioritize sustainable and ethical travel practices..</p>
         <a href="#home">Learn more</a>
         </div>
         <div id="flex5">
@@ -258,19 +281,19 @@ background-color: lightgray;
             <div id="content5">
             <div id="bg1">
             <p>Palawan</p>
-            <p>palawan officially the province of palawan is a archipilagic province of phillipines that is located in the region of Mimaropa</p>
+            <p style="font-weight: 1000;">palawan officially the province of palawan is a archipilagic province of phillipines that is located in the region of Mimaropa</p>
             <button type="submit">Make a plane</button>
             <button type="submit">Learn more</button>
             </div>
             <div id="bg2">
             <p>Norway</p>
-            <p>Norway formally yhe kingdom of norway,is a nordic country in the northern europe situated on the scandinavian Peninsula</p>
+            <p style="font-weight: 1000;">Norway formally yhe kingdom of norway,is a nordic country in the northern europe situated on the scandinavian Peninsula</p>
             <button type="submit">Make a plane</button>
             <button type="submit">Learn more</button>
             </div>
             <div id="bg3">
             <p>Seoul</p>
-            <p>Seoul officially Seoul special city,is the capital of republic of korea commonly known as south korea</p>
+            <p style="font-weight: 1000;">Seoul officially Seoul special city,is the capital of republic of korea commonly known as south korea</p>
             <button type="submit">Make a plane</button>
             <button type="submit">Learn more</button>
             </div>
@@ -281,14 +304,35 @@ background-color: lightgray;
                 <p>find answers to common queries about majestic travels services,booking process and more.Explore our faq section to get the information you need for a smmoth and enjoyable travel experience.</p>
                 </div>
                 <div id="fq1">
-                <p id="rcorners1">What services do you offer?</p><button id="expand-btn" onclick="toggleText()">answer</button>
-                <p id="expand-text" style="display:none;">We offer trip services to various countries.</p>
-                <p id="rcorners1">How can I book a trip?</p>
-                <p id="rcorners1">Can I customize my itenary?</p>
-                <p id="rcorners1">What is your cancellation policy?</p>
-                <p id="rcorners1">Do you offer Travel Insurance?</p>
-                <p id="rcorners1">How do I stay updated on travel advisories?</p>
-                <p id="rcorners1">What payment methods do you accept?</p>
+<button class="accordion">What services do you offer?</button>
+<div class="panel">
+<p>We offer trip services to various countries</p>  
+</div>
+
+<button class="accordion">How can I book a trip?</button>
+<div class="panel">
+ <p>through our website</p>
+</div>
+<button class="accordion">Can I customize my itenary?</button>
+<div class="panel">
+<p>yes you can customize</p>  
+</div>
+<button class="accordion">What is your cancellation policy?</button>
+<div class="panel">
+<p>at present there is no cancellation policy</p>  
+</div>
+<button class="accordion">Do you offer Travel Insurance?</button>
+<div class="panel">
+<p>yes we offer travel insurance through acko</p>  
+</div>
+<button class="accordion">How do I stay updated on travel advisories?</button>
+<div class="panel">
+<p>through whatsapp groups</p>  
+</div>
+<button class="accordion">What payment methods do you accept?</button>
+<div class="panel">
+<p>Upi,credit and debit cards</p>  
+</div>
                 </div>
             </div>
             <script>
@@ -330,22 +374,22 @@ background-color: lightgray;
               }
               }
               }
-              function toggleText() {
-      var text = document.getElementById("expand-text");
-      var button = document.getElementById("expand-btn");
-      if (text.style.display === "none") {
-        text.style.display = "block";
-        button.textContent = "Hide";
-      } else {
-        text.style.display = "none";
-        button.textContent = "answer";
-      }
+        var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
     }
+  });
+}
 
  </script>
-
-
-
 </div>
 </body>
 </html>
